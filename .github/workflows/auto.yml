@@ -1,5 +1,9 @@
 name: Auto Pluto Update
 
+runs:
+  using: 'node24'
+  main: 'main.js'
+      
 on:
   schedule:
     - cron: '0 * * * *'
