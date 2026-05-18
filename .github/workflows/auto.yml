@@ -1,5 +1,15 @@
 name: Auto Pluto Update
-      
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  build:
+    runs-on: node24
+    
+    steps:
+      - uses: actions/checkout@v4
+
 on:
   schedule:
     - cron: '0 * * * *'
